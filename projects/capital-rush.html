@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Capital Rush | Pratik Meshram</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .project-page{max-width:1240px;margin:auto;padding:150px 4vw 100px}
+    .back-link{display:inline-block;color:#777;font:700 9px "Space Grotesk";letter-spacing:.15em;margin-bottom:45px}
+    .back-link:hover{color:var(--accent)}
+    .project-page h1{font-size:clamp(60px,9vw,120px);line-height:.82;margin:0}
+    .project-page .page-type{color:var(--accent);font:700 10px "Space Grotesk";letter-spacing:.18em;margin:20px 0 35px}
+    .full-video{margin-top:50px;background:#0d0d0d;border:1px solid #292929;aspect-ratio:16/9;position:relative}
+    .full-video video{width:100%;height:100%;object-fit:cover;display:block}
+    .video-note{position:absolute;inset:0;display:grid;place-items:center;color:#555;font:700 10px "Space Grotesk";letter-spacing:.15em;pointer-events:none}
+    .project-page-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;margin-top:65px;border-top:1px solid #292929;padding-top:40px}
+    .project-page h2{font-size:38px;margin-bottom:20px}
+    .project-page p{color:#888;font-size:14px;line-height:1.8}
+    .project-page .work-list{border-top:1px solid #292929}
+    .project-page .work-list p{padding:17px 0;border-bottom:1px solid #292929;margin:0}
+    .page-tech{display:flex;gap:8px;flex-wrap:wrap;margin-top:25px}
+    .page-tech span{border:1px solid #303030;padding:8px 10px;color:#777;font:700 8px "Space Grotesk";letter-spacing:.12em}
+    @media(max-width:700px){.project-page{padding:120px 6vw 80px}.project-page-grid{grid-template-columns:1fr;gap:40px}.project-page h1{font-size:62px}}
+  </style>
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="site-header">
+    <nav>
+      <a href="../index.html#work">Work</a>
+      <a href="../index.html#skills">Skills</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+    <a class="header-cta" href="../index.html#contact">Let's talk <span>↗</span></a>
+  </header>
+
+  <main class="project-page">
+    <a class="back-link" href="../index.html#work">← BACK TO PROJECTS</a>
+    <p class="eyebrow">PROJECT / 02</p>
+    <h1>Capital Rush</h1>
+    <p class="page-type">MULTIPLAYER TRADING GAME</p>
+
+    <div class="full-video">
+      <video controls playsinline preload="metadata">
+        <source src="../assets/videos/capital-rush-full.mp4" type="video/mp4">
+      </video>
+      <div class="video-note">ADD FULL PROJECT VIDEO</div>
+    </div>
+
+    <div class="project-page-grid">
+      <div>
+        <p class="eyebrow">WHAT IT IS</p>
+        <h2>About the project</h2>
+        <p>A real-time multiplayer trading game built around player economy, progression, game mechanics, monetization and live-game systems.</p>
+      </div>
+      <div>
+        <p class="eyebrow">MY WORK</p>
+        <h2>What I did</h2>
+        <div class="work-list">
+          <p>Multiplayer gameplay · Backend systems · Economy · Progression · Game mechanics · Payments · Analytics · Live operations</p>
+        </div>
+        <div class="page-tech">
+          <span>Unity</span><span>Photon</span><span>PlayFab</span><span>Firebase</span>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

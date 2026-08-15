@@ -414,3 +414,193 @@ footer{border-top:1px solid var(--line);padding:24px 8vw;display:flex;justify-co
     text-align:right;
   }
 }
+
+/* --- Selected Projects / teaser video layout --- */
+.projects-list{
+  display:flex;
+  flex-direction:column;
+  gap:110px;
+}
+.project-showcase{
+  display:grid;
+  grid-template-columns:minmax(0,1.35fr) minmax(360px,.65fr);
+  gap:55px;
+  align-items:center;
+}
+.project-showcase.reverse{
+  grid-template-columns:minmax(360px,.65fr) minmax(0,1.35fr);
+}
+.project-showcase.reverse .project-media{order:2}
+.project-showcase.reverse .project-details{order:1}
+.project-media{
+  position:relative;
+  display:block;
+  aspect-ratio:16/9;
+  overflow:hidden;
+  background:#101010;
+  border:1px solid #292929;
+  isolation:isolate;
+}
+.project-teaser{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  z-index:1;
+  transition:transform .5s ease,filter .5s ease;
+  background:#111;
+}
+.project-media:hover .project-teaser{
+  transform:scale(1.025);
+  filter:brightness(1.08);
+}
+.video-placeholder{
+  position:absolute;
+  inset:0;
+  z-index:2;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  gap:10px;
+  background:
+    radial-gradient(circle at 50% 45%,rgba(216,255,62,.10),transparent 30%),
+    linear-gradient(135deg,#151515,#090909);
+  pointer-events:none;
+}
+.project-media:has(video) .video-placeholder{
+  /* It becomes visually useful as a fallback until the real teaser is supplied. */
+}
+.placeholder-number{
+  color:#444;
+  font:700 clamp(55px,8vw,100px)/1 "Space Grotesk";
+  letter-spacing:-.08em;
+}
+.placeholder-text{
+  color:#6c6c68;
+  font:700 9px/1.5 "Space Grotesk";
+  letter-spacing:.18em;
+  text-align:center;
+}
+.play-indicator{
+  position:absolute;
+  z-index:4;
+  left:22px;
+  bottom:20px;
+  padding:10px 13px;
+  background:rgba(8,8,8,.82);
+  border:1px solid rgba(216,255,62,.35);
+  color:#d8d8d2;
+  font:700 9px "Space Grotesk";
+  letter-spacing:.14em;
+  backdrop-filter:blur(8px);
+}
+.play-indicator span{color:var(--accent)}
+.project-details{
+  min-width:0;
+}
+.project-heading{
+  display:flex;
+  gap:20px;
+  align-items:flex-start;
+}
+.project-number{
+  color:var(--accent);
+  font:700 13px "Space Grotesk";
+  padding-top:7px;
+}
+.project-heading .project-type{
+  margin-bottom:9px;
+}
+.project-details h3{
+  font-size:clamp(38px,4vw,62px);
+  line-height:.9;
+}
+.project-description{
+  color:#92928d;
+  font-size:14px;
+  line-height:1.75;
+  max-width:520px;
+  margin:27px 0 26px;
+}
+.project-contribution{
+  border-top:1px solid #292929;
+  border-bottom:1px solid #292929;
+  padding:17px 0;
+  max-width:560px;
+}
+.project-contribution span{
+  display:block;
+  color:#555;
+  font:700 8px "Space Grotesk";
+  letter-spacing:.16em;
+  margin-bottom:9px;
+}
+.project-contribution p{
+  margin:0;
+  color:#aaa;
+  font-size:11px;
+  line-height:1.65;
+}
+.project-tech{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-top:19px;
+}
+.project-tech span{
+  border:1px solid #303030;
+  padding:7px 9px;
+  color:#777;
+  font:700 8px "Space Grotesk";
+  letter-spacing:.12em;
+}
+.project-arrow{
+  display:inline-block;
+  margin-top:25px;
+  color:#ddd;
+  font:700 9px "Space Grotesk";
+  letter-spacing:.15em;
+}
+.project-arrow span{color:var(--accent);margin-left:5px}
+.project-breakdown-note{
+  border:1px solid #292929;
+  padding:25px 30px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:25px;
+}
+.project-breakdown-note span{
+  color:var(--accent);
+  font:700 9px "Space Grotesk";
+  letter-spacing:.16em;
+}
+.project-breakdown-note strong{
+  color:#888;
+  font:500 13px "Inter";
+}
+
+@media(max-width:900px){
+  .projects-list{gap:80px}
+  .project-showcase,
+  .project-showcase.reverse{
+    grid-template-columns:1fr;
+    gap:30px;
+  }
+  .project-showcase.reverse .project-media,
+  .project-showcase.reverse .project-details{
+    order:initial;
+  }
+  .project-details h3{font-size:48px}
+}
+@media(max-width:520px){
+  .projects-list{gap:65px}
+  .project-heading{gap:13px}
+  .project-details h3{font-size:42px}
+  .project-description{font-size:13px}
+  .project-breakdown-note{display:block}
+  .project-breakdown-note strong{display:block;margin-top:12px}
+}
