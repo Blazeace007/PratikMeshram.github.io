@@ -188,97 +188,72 @@ h2{font-size:clamp(48px,6vw,84px);line-height:.92}
   padding-left:8vw;
   padding-right:8vw;
 }
-.skills-groups{
-  display:flex;
-  flex-direction:column;
-  gap:0;
-}
-.skill-group{
-  padding:48px 0 58px;
+.compact-skills{
   border-top:1px solid var(--line);
 }
-.skill-group:first-child{border-top:0}
-.skill-group-heading{
-  display:grid;
-  grid-template-columns:65px 1fr;
-  gap:20px;
-  align-items:start;
-  margin-bottom:30px;
+.compact-skill-group{
+  padding:27px 0;
+  border-bottom:1px solid var(--line);
 }
-.skill-group-heading>span{
+.compact-group-title{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  margin-bottom:19px;
+}
+.compact-group-title>span{
+  width:25px;
   color:var(--accent);
-  font:700 11px "Space Grotesk";
-  letter-spacing:.14em;
-}
-.skill-group-heading p{
-  margin:0 0 8px;
-  color:#555;
   font:700 9px "Space Grotesk";
+  letter-spacing:.12em;
+}
+.compact-group-title h3{
+  margin:0;
+  color:#8d8d88;
+  font:700 10px "Space Grotesk";
   letter-spacing:.17em;
 }
-.skill-group-heading h3{
-  font-size:clamp(30px,3vw,44px);
-  line-height:.95;
+.skill-logo-grid{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
 }
-.skill-icon-grid{
-  display:grid;
-  grid-template-columns:repeat(5,1fr);
-  gap:10px;
-}
-.skill-tile{
-  min-height:150px;
-  padding:20px;
+.skill-logo-item{
+  min-width:112px;
+  min-height:82px;
+  padding:11px 12px 10px;
   border:1px solid #292929;
-  background:linear-gradient(145deg,#111,#0c0c0c);
+  background:#0d0d0d;
   display:flex;
   flex-direction:column;
-  justify-content:space-between;
-  transition:transform .25s,border-color .25s,background .25s;
+  align-items:center;
+  justify-content:center;
+  gap:7px;
+  transition:transform .2s,border-color .2s,background .2s;
 }
-.skill-tile:hover{
-  transform:translateY(-4px);
-  border-color:#515151;
-  background:#151515;
+.skill-logo-item:hover{
+  transform:translateY(-3px);
+  border-color:#4c4c4c;
+  background:#131313;
 }
-.skill-icon{
-  width:45px;
-  height:45px;
-  display:grid;
-  place-items:center;
-  border:1px solid #383838;
-  color:var(--accent);
-  background:#0b0b0b;
-  font:700 13px "Space Grotesk";
-  letter-spacing:-.03em;
-  transition:.25s;
+.skill-logo-item img{
+  width:34px;
+  height:34px;
+  object-fit:contain;
+  display:block;
 }
-.skill-tile:hover .skill-icon{
-  border-color:rgba(216,255,62,.55);
-  box-shadow:0 0 22px rgba(216,255,62,.08);
+.skill-logo-item span{
+  color:#b2b2ad;
+  font:600 9px "Space Grotesk";
+  letter-spacing:.02em;
+  text-align:center;
 }
-.skill-tile strong{
-  margin-top:22px;
-  color:#deded9;
-  font:600 12px "Space Grotesk";
-  letter-spacing:-.01em;
-}
-.skill-tile small{
-  margin-top:6px;
-  color:#5f5f5b;
-  font-size:9px;
-  line-height:1.4;
-}
-.icon-unity{font-size:20px}.icon-csharp{font-size:12px}.icon-code{font-size:15px}
-.icon-combat{font-size:19px}.icon-progression{font-size:23px}
-.icon-economy{font-size:22px}.icon-balance{font-size:22px}
-.icon-script{font-size:22px}.icon-video{font-size:18px}
-.icon-photoshop{font-size:20px}.icon-audio{font-size:12px}
 .skills-note{
+  margin-top:16px;
+  padding:19px 22px;
   border:1px solid #292929;
-  margin-top:15px;
-  padding:24px 28px;
   display:flex;
-  gap:30px;
+  gap:25px;
   align-items:flex-start;
 }
 .skills-note span{
@@ -289,11 +264,10 @@ h2{font-size:clamp(48px,6vw,84px);line-height:.92}
 }
 .skills-note p{
   margin:0;
-  color:#6d6d69;
-  font-size:11px;
+  color:#666;
+  font-size:10px;
   line-height:1.7;
 }
-.tech-marquee{display:none}
 .about-section{display:grid;grid-template-columns:1fr 1.25fr;gap:100px;align-items:center;border-top:1px solid var(--line)}.about-photo{aspect-ratio:4/5;background:linear-gradient(145deg,#161616,#0c0c0c);border:1px solid var(--line);display:grid;place-items:center}.photo-placeholder{width:70%;height:80%;border:1px dashed #3d3d3d;display:grid;place-items:center;text-align:center;color:#444;font:700 14px/1.2 "Space Grotesk";letter-spacing:.1em}.about-copy h2{margin-bottom:35px}.about-copy>p:not(.eyebrow){color:#777;line-height:1.8;font-size:14px;max-width:650px}.about-facts{display:flex;gap:60px;margin-top:45px}.about-facts div{display:flex;flex-direction:column;gap:8px}.about-facts span{font-size:8px;color:#555;letter-spacing:.15em}.about-facts strong{font:700 14px "Space Grotesk"}
 .contact-section{border-top:1px solid var(--line);text-align:center;padding-top:180px;padding-bottom:160px}.contact-section .eyebrow{color:var(--accent)}.contact-section h2{font-size:clamp(65px,10vw,140px)}.contact-copy{max-width:450px;margin:35px auto;color:#777;line-height:1.7;font-size:14px}.contact-email{display:inline-block;font:600 clamp(22px,4vw,42px) "Space Grotesk";border-bottom:1px solid #3d3d3d;padding-bottom:9px;transition:.2s}.contact-email:hover{color:var(--accent);border-color:var(--accent)}.contact-email span{color:var(--accent);font-size:.6em}.socials{display:flex;justify-content:center;gap:28px;margin-top:55px}.socials a{font-size:10px;text-transform:uppercase;letter-spacing:.13em;color:#777}.socials a:hover{color:var(--text)}
 footer{border-top:1px solid var(--line);padding:24px 8vw;display:flex;justify-content:space-between;color:#4d4d4d;font-size:8px;letter-spacing:.13em}
@@ -716,18 +690,224 @@ footer{border-top:1px solid var(--line);padding:24px 8vw;display:flex;justify-co
   .project-breakdown-note strong{display:block;margin-top:12px}
 }
 
-@media(max-width:1100px){
-  .skill-icon-grid{grid-template-columns:repeat(4,1fr)}
-}
+
 @media(max-width:800px){
   .skills-section{padding-left:6vw;padding-right:6vw}
-  .skill-icon-grid{grid-template-columns:repeat(3,1fr)}
-  .skill-group-heading{grid-template-columns:45px 1fr}
+  .skill-logo-item{min-width:100px}
 }
 @media(max-width:560px){
-  .skill-icon-grid{grid-template-columns:repeat(2,1fr)}
-  .skill-tile{min-height:135px;padding:15px}
-  .skill-icon{width:40px;height:40px}
+  .skill-logo-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+  .skill-logo-item{min-width:0;min-height:76px;padding:9px 6px}
+  .skill-logo-item img{width:29px;height:29px}
+  .skill-logo-item span{font-size:8px}
   .skills-note{display:block}
-  .skills-note p{margin-top:12px}
+  .skills-note p{margin-top:10px}
+}
+
+/* --- Game Design section --- */
+.design-section{
+  border-top:1px solid var(--line);
+}
+.design-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+}
+.design-card{
+  border:1px solid #292929;
+  background:#0d0d0d;
+  overflow:hidden;
+  transition:transform .25s,border-color .25s;
+}
+.design-card:hover{
+  transform:translateY(-4px);
+  border-color:#4a4a4a;
+}
+.design-image{
+  display:block;
+  position:relative;
+  aspect-ratio:16/8;
+  overflow:hidden;
+  background:#111;
+}
+.design-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transition:transform .45s ease,filter .45s ease;
+}
+.design-card:hover .design-image img{
+  transform:scale(1.03);
+  filter:brightness(1.08);
+}
+.image-fallback{
+  position:absolute;
+  inset:0;
+  display:grid;
+  place-items:center;
+  color:#4c4c48;
+  font:700 8px "Space Grotesk";
+  letter-spacing:.16em;
+  background:
+    radial-gradient(circle at 50% 45%,rgba(216,255,62,.08),transparent 28%),
+    #111;
+  z-index:-1;
+}
+.design-content{
+  position:relative;
+  padding:25px 28px 28px;
+}
+.design-number{
+  color:var(--accent);
+  font:700 10px "Space Grotesk";
+  letter-spacing:.15em;
+}
+.design-type{
+  color:#555;
+  font:700 8px "Space Grotesk";
+  letter-spacing:.16em;
+  margin:22px 0 9px;
+}
+.design-card h3{
+  font-size:clamp(31px,3vw,44px);
+  line-height:.95;
+}
+.design-card>div>p:not(.design-type){
+  max-width:500px;
+  margin-top:17px;
+  color:#80807b;
+  font-size:11px;
+  line-height:1.75;
+}
+.design-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+  margin-top:21px;
+}
+.design-tags span{
+  padding:7px 9px;
+  border:1px solid #292929;
+  color:#666;
+  font:700 7px "Space Grotesk";
+  letter-spacing:.12em;
+}
+.design-strip{
+  margin-top:12px;
+  padding:21px 25px;
+  border:1px solid #292929;
+  display:flex;
+  gap:25px;
+}
+.design-strip span{
+  color:var(--accent);
+  white-space:nowrap;
+  font:700 8px "Space Grotesk";
+  letter-spacing:.15em;
+}
+.design-strip p{
+  margin:0;
+  color:#6b6b66;
+  font-size:10px;
+  line-height:1.7;
+}
+
+/* --- YouTube section --- */
+.youtube-section{
+  border-top:1px solid var(--line);
+}
+.youtube-video-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:12px;
+}
+.youtube-video-card{
+  border:1px solid #292929;
+  background:#0d0d0d;
+  overflow:hidden;
+}
+.youtube-player{
+  aspect-ratio:16/9;
+  background:#090909;
+}
+.youtube-player iframe{
+  width:100%;
+  height:100%;
+  display:block;
+  border:0;
+}
+.youtube-video-info{
+  display:grid;
+  grid-template-columns:35px 1fr;
+  gap:12px;
+  padding:19px 20px 21px;
+}
+.youtube-video-info>span{
+  color:var(--accent);
+  font:700 9px "Space Grotesk";
+  letter-spacing:.14em;
+}
+.youtube-video-info p{
+  margin:0 0 7px;
+  color:#555;
+  font:700 7px "Space Grotesk";
+  letter-spacing:.16em;
+}
+.youtube-video-info h3{
+  margin:0;
+  color:#ddd;
+  font:600 16px "Space Grotesk";
+}
+.youtube-video-info small{
+  display:block;
+  margin-top:8px;
+  color:#666;
+  font-size:9px;
+  line-height:1.5;
+}
+.youtube-footer{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-top:12px;
+  padding:18px 22px;
+  border:1px solid #292929;
+}
+.youtube-footer>span{
+  color:#555;
+  font:700 8px "Space Grotesk";
+  letter-spacing:.15em;
+}
+.youtube-footer a{
+  color:#ddd;
+  font:700 9px "Space Grotesk";
+  letter-spacing:.15em;
+}
+.youtube-footer a span{color:var(--accent);margin-left:5px}
+
+/* Keep top nav usable with the added items. */
+.site-header nav{
+  gap:clamp(14px,2vw,30px);
+}
+.site-header nav a{
+  white-space:nowrap;
+}
+@media(max-width:1050px){
+  .site-header nav{gap:14px}
+  .site-header nav a{font-size:8px}
+}
+@media(max-width:900px){
+  .youtube-video-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:800px){
+  .design-grid{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+  .youtube-video-grid{grid-template-columns:1fr}
+  .design-content{padding:22px}
+  .design-strip,
+  .youtube-footer{display:block}
+  .design-strip p{margin-top:10px}
+  .youtube-footer a{display:block;margin-top:10px}
 }

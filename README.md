@@ -37,3 +37,6 @@ No server or paid hosting is required.
 
 ## Skills icons
 The skills section uses locally rendered text/icon tiles rather than third-party logo files. This keeps the GitHub Pages site self-contained and avoids implying endorsement by tool vendors.
+
+## Custom skills icons
+Place your own PNG/JPG/SVG skill images in `assets/images/skills/` using the filenames listed in `assets/images/skills/README.txt`. Replace an image file to change an icon without editing the HTML.
