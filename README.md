@@ -34,3 +34,6 @@ Then replace the generated project visuals with your real screenshots/GIFs/video
 7. Your site will appear at `https://YOURUSERNAME.github.io`.
 
 No server or paid hosting is required.
+
+## Skills icons
+The skills section uses locally rendered text/icon tiles rather than third-party logo files. This keeps the GitHub Pages site self-contained and avoids implying endorsement by tool vendors.
