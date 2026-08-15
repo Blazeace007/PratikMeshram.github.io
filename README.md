@@ -1,4 +1,4 @@
-# Pratik Meshram Portfolio
+# Blaze Game Developer Portfolio
 
 A dark, game-focused portfolio website for Pratik Meshram.
 
