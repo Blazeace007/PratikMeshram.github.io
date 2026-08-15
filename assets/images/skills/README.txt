@@ -1,46 +1,55 @@
-SKILLS IMAGE GUIDE
+SKILLS ICONS — REPLACE THESE FILES WITH YOUR OWN IMAGES
 
-Add your own PNG/JPG/SVG images to this folder using these exact filenames.
+Every skill on the website has its own image file. Replace any file below with your own PNG/JPG/SVG.
+If using JPG or SVG, update the .png extension for that item in index.html.
 
-GAME DEVELOPMENT
 unity.png
 csharp.png
 gameplay.png
 architecture.png
 state-machine.png
 design-patterns.png
-
-MULTIPLAYER & BACKEND
+debugging.png
+game-systems.png
+combat-design.png
+physics.png
+animation.png
+input.png
+camera.png
+ui-ux.png
 photon.png
 netcode.png
 playfab.png
 firebase.png
 rest-api.png
 json.png
-
-GAME DESIGN
-game-systems.png
-combat-design.png
+cloudscript.png
+server-api.png
+asset-bundling.png
+addressables.png
+ccd.png
+optimization.png
+urp.png
+shaders.png
+sprite-atlas.png
+git.png
+live-ops.png
+analytics.png
+android.png
+ios.png
+steam.png
+webgl.png
+payments.png
+ads.png
+sdk.png
+database.png
 progression.png
 economy.png
 balancing.png
 level-design.png
 feedback.png
-ui-ux.png
-
-PLATFORMS & PRODUCTION
-android.png
-ios.png
-steam.png
-webgl.png
-optimization.png
-physics.png
-animation.png
-asset-bundling.png
-git.png
-live-ops.png
-
-CONTENT & STORYTELLING
+monetization.png
+player-experience.png
 script-writing.png
 research.png
 storytelling.png
@@ -52,6 +61,4 @@ seo.png
 social-media.png
 ugc.png
 
-The website will automatically use these files.
-Recommended: transparent PNG or SVG, roughly square, around 128x128 or 256x256.
-You can change any icon later simply by replacing the corresponding image file.
+Recommended icon size: 128x128 or 256x256, preferably transparent PNG/SVG.
