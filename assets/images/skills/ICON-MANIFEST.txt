@@ -1,0 +1,61 @@
+57 SKILL ICONS — REAL BRAND LOGOS + PROFESSIONAL MARKS
+
+01. Unity -> unity.png
+02. C# -> csharp.png
+03. Gameplay Programming -> gameplay.png
+04. Game Architecture -> architecture.png
+05. State Machines -> state-machine.png
+06. Design Patterns -> design-patterns.png
+07. Debugging -> debugging.png
+08. Game Systems -> game-systems.png
+09. Combat -> combat-design.png
+10. Physics -> physics.png
+11. Animation Systems -> animation.png
+12. Input Systems -> input.png
+13. Camera Systems -> camera.png
+14. UI / UX -> ui-ux.png
+15. Photon Fusion 2 -> photon.png
+16. Netcode -> netcode.png
+17. PlayFab -> playfab.png
+18. Firebase -> firebase.png
+19. REST APIs -> rest-api.png
+20. JSON / Data -> json.png
+21. CloudScript -> cloudscript.png
+22. Server APIs -> server-api.png
+23. AssetBundles -> asset-bundling.png
+24. Addressables -> addressables.png
+25. Cloud Content Delivery -> ccd.png
+26. Optimization -> optimization.png
+27. URP -> urp.png
+28. Shaders -> shaders.png
+29. Sprite Atlases -> sprite-atlas.png
+30. Git -> git.png
+31. Live Operations -> live-ops.png
+32. Analytics -> analytics.png
+33. Android -> android.png
+34. iOS -> ios.png
+35. PC / Steam -> steam.png
+36. WebGL -> webgl.png
+37. Payments -> payments.png
+38. Ads -> ads.png
+39. SDK Integration -> sdk.png
+40. Database Management -> database.png
+41. Progression -> progression.png
+42. Economy -> economy.png
+43. Game Balancing -> balancing.png
+44. Level Design -> level-design.png
+45. Feedback Systems -> feedback.png
+46. Monetization -> monetization.png
+47. Player Experience -> player-experience.png
+48. Script Writing -> script-writing.png
+49. Research -> research.png
+50. Storytelling -> storytelling.png
+51. Video Production -> video-production.png
+52. DaVinci Resolve -> davinci.png
+53. Photoshop -> photoshop.png
+54. Audio Editing -> audacity.png
+55. SEO -> seo.png
+56. Social Strategy -> social-media.png
+57. UGC Content -> ugc.png
+
+Brand marks are used for recognizable technologies/products. Non-branded skills use professional visual marks. Replace any PNG manually while keeping its filename.
