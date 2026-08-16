@@ -11,9 +11,6 @@
     .back-link:hover{color:var(--accent)}
     .project-page h1{font-size:clamp(60px,9vw,120px);line-height:.82;margin:0}
     .project-page .page-type{color:var(--accent);font:700 10px "Space Grotesk";letter-spacing:.18em;margin:20px 0 35px}
-    .full-video{margin-top:50px;background:#0d0d0d;border:1px solid #292929;aspect-ratio:16/9;position:relative}
-    .full-video video{width:100%;height:100%;object-fit:cover;display:block}
-    .video-note{position:absolute;inset:0;display:grid;place-items:center;color:#555;font:700 10px "Space Grotesk";letter-spacing:.15em;pointer-events:none}
     .project-page-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;margin-top:65px;border-top:1px solid #292929;padding-top:40px}
     .project-page h2{font-size:38px;margin-bottom:20px}
     .project-page p{color:#888;font-size:14px;line-height:1.8}
@@ -21,7 +18,45 @@
     .project-page .work-list p{padding:17px 0;border-bottom:1px solid #292929;margin:0}
     .page-tech{display:flex;gap:8px;flex-wrap:wrap;margin-top:25px}
     .page-tech span{border:1px solid #303030;padding:8px 10px;color:#777;font:700 8px "Space Grotesk";letter-spacing:.12em}
-    @media(max-width:700px){.project-page{padding:120px 6vw 80px}.project-page-grid{grid-template-columns:1fr;gap:40px}.project-page h1{font-size:62px}}
+    .showcase{margin-top:58px}
+    .showcase-heading{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:22px;border-top:1px solid #292929;padding-top:28px}
+    .showcase-heading h2{margin:0}
+    .showcase-heading p{margin:0;max-width:430px}
+    .video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .video-card{display:block;background:#0d0d0d;border:1px solid #292929;text-decoration:none;overflow:hidden;transition:transform .25s ease,border-color .25s ease}
+    .video-card:hover{transform:translateY(-4px);border-color:#555}
+    .video-thumb{aspect-ratio:16/9;overflow:hidden;position:relative;background:#111}
+    .video-thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s ease}
+    .video-card:hover .video-thumb img{transform:scale(1.035)}
+    .play-badge{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:58px;height:58px;border:1px solid rgba(255,255,255,.8);border-radius:50%;background:rgba(0,0,0,.62);display:grid;place-items:center}
+    .play-badge:after{content:"";margin-left:4px;border-left:15px solid #fff;border-top:10px solid transparent;border-bottom:10px solid transparent}
+    .video-info{padding:17px 18px 19px}
+    .video-number{color:var(--accent);font:700 8px "Space Grotesk";letter-spacing:.15em}
+    .video-title{display:block;color:#eee;font:700 16px "Space Grotesk";margin-top:7px}
+    .video-sub{display:block;color:#666;font:700 8px "Space Grotesk";letter-spacing:.12em;margin-top:8px}
+
+    .detail-section{margin-top:75px;border-top:1px solid #292929;padding-top:34px}
+    .detail-heading{margin-bottom:30px}
+    .detail-heading h2{margin:4px 0 0;font-size:38px}
+    .detail-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:#292929;border:1px solid #292929}
+    .detail-grid article{background:#0b0b0b;padding:30px;min-height:190px}
+    .detail-grid article>span{color:var(--accent);font:700 9px "Space Grotesk";letter-spacing:.15em}
+    .detail-grid h3{font:700 19px "Space Grotesk";margin:15px 0 10px;color:#eee}
+    .detail-grid p{margin:0;color:#777;font-size:13px;line-height:1.75}
+    .environment-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:55px}
+    .environment-grid>div>p{color:#888;font-size:14px;line-height:1.8}
+    .environment-grid ul{padding:0;margin:22px 0 0;list-style:none;border-top:1px solid #292929}
+    .environment-grid li{padding:13px 0;border-bottom:1px solid #292929;color:#777;font-size:12px;line-height:1.55}
+    .environment-note{border-left:1px solid #292929;padding-left:28px}
+    .environment-note strong{display:block;color:#eee;font:700 24px/1.2 "Space Grotesk";margin:12px 0 18px}
+    .environment-note p:last-child{color:#777;font-size:12px;line-height:1.7}
+    .detail-section .page-tech{margin-top:0}
+    @media(max-width:850px){
+      .detail-grid,.environment-grid{grid-template-columns:1fr}
+      .detail-heading h2{font-size:31px}
+      .environment-note{border-left:0;border-top:1px solid #292929;padding:28px 0 0}
+    }
+    @media(max-width:850px){.video-grid{grid-template-columns:1fr}.project-page-grid{grid-template-columns:1fr;gap:40px}.showcase-heading{display:block}.showcase-heading p{margin-top:12px}.project-page{padding:120px 6vw 80px}.project-page h1{font-size:62px}}
   </style>
 </head>
 <body>
@@ -38,34 +73,120 @@
 
   <main class="project-page">
     <a class="back-link" href="../index.html#work">← BACK TO PROJECTS</a>
-    <p class="eyebrow">PROJECT / 01</p>
+    <p class="eyebrow">PROJECT / 02</p>
     <h1>Zard</h1>
     <p class="page-type">3D COMBAT PROTOTYPE</p>
 
-    <div class="full-video">
-      <video controls playsinline preload="metadata">
-        <source src="../assets/videos/zard-full.mp4" type="video/mp4">
-      </video>
-      <div class="video-note">ADD FULL PROJECT VIDEO</div>
-    </div>
+    <section class="showcase">
+      <div class="showcase-heading">
+        <div><p class="eyebrow">GAMEPLAY SHOWCASE</p><h2>Combat in motion.</h2></div>
+        <p>Three development videos covering the combat system, AI and advanced mechanics, and the level / atmosphere work behind Zard.</p>
+      </div>
+
+      <div class="video-grid">
+        <a class="video-card" href="https://www.linkedin.com/posts/pratik-meshram-870180181_madewithunity-unity3d-gamedevelopment-activity-7383082777686220800-YuS0" target="_blank" rel="noopener">
+          <div class="video-thumb"><img src="../assets/images/zard/zard-video-01.jpg" alt="Zard combat system video"><span class="play-badge"></span></div>
+          <div class="video-info"><span class="video-number">01 / COMBAT SYSTEM</span><span class="video-title">Combat Integration</span><span class="video-sub">WATCH VIDEO ↗</span></div>
+        </a>
+
+        <a class="video-card" href="https://www.linkedin.com/posts/pratik-meshram-870180181_madewithunity-unity3d-gamedevelopment-activity-7385074195954577408-_aiW" target="_blank" rel="noopener">
+          <div class="video-thumb"><img src="../assets/images/zard/zard-video-02.jpg" alt="Zard AI and parry video"><span class="play-badge"></span></div>
+          <div class="video-info"><span class="video-number">02 / AI + MECHANICS</span><span class="video-title">Combat System Evolved</span><span class="video-sub">WATCH VIDEO ↗</span></div>
+        </a>
+
+        <a class="video-card" href="https://www.linkedin.com/posts/pratik-meshram-870180181_unity-gamedesign-leveldesign-activity-7382538358914367488-FK2r" target="_blank" rel="noopener">
+          <div class="video-thumb"><img src="../assets/images/zard/zard-video-03.jpg" alt="Zard level and atmosphere video"><span class="play-badge"></span></div>
+          <div class="video-info"><span class="video-number">03 / LEVEL + ATMOSPHERE</span><span class="video-title">Witcher-Inspired Level</span><span class="video-sub">WATCH VIDEO ↗</span></div>
+        </a>
+      </div>
+    </section>
 
     <div class="project-page-grid">
       <div>
         <p class="eyebrow">WHAT IT IS</p>
-        <h2>About the project</h2>
-        <p>A 3D combat prototype exploring responsive attacks, combos, AI, hit impact, timing windows and player-input responsiveness.</p>
+        <h2>Building the combat loop.</h2>
+        <p>Zard is a 3D combat prototype built around responsive melee combat, readable enemy behaviour and timing-driven defensive mechanics. The project evolved from integrating a character combat system into a playable environment into a more complete combat experience with enemies, AI, parry/counter mechanics, stamina and posture.</p>
+        <p>The goal was not simply to add attacks, but to make the interaction between animation, hit detection, timing, feedback and enemy behaviour feel consistent and deliberate.</p>
       </div>
+
       <div>
         <p class="eyebrow">MY WORK</p>
-        <h2>What I did</h2>
+        <h2>Combat implementation</h2>
         <div class="work-list">
-          <p>Combat systems · Combo flow · AI · Hit impact · Timing windows · Player responsiveness · Parry mechanics</p>
-        </div>
-        <div class="page-tech">
-          <span>Unity</span><span>C#</span><span>Combat Design</span>
+          <p><b>Character & Animation</b> — Character rigging, locomotion and attack animations, with animation blending and transitions refined around combat timing.</p>
+          <p><b>Combat Attacks</b> — Implemented Swing Slash, Shield Bash and Poke attacks, plus combo chains and transitions between attacks and abilities.</p>
+          <p><b>Hit Detection</b> — Built collision-based combat where attacks register only while the weapon hitbox is active during the strike animation. Player and enemy attacks use the same hit-detection approach for consistent combat rules.</p>
+          <p><b>Defensive Mechanics</b> — Added dodge rolls with i-frames, blocking, stamina drain, posture/exhaustion and Block → Parry transitions.</p>
+          <p><b>Parry & Counter</b> — Designed a timing-based parry window where raising the shield just before impact staggers the opponent and creates an opening for a counterattack. Animation timing, collider activation and feedback were tuned together.</p>
+          <p><b>Enemy AI</b> — Added animated enemies with colliders and pathfinding for patrol/chase behaviour, then introduced a behaviour tree to drive movement, aggression and attacks.</p>
+          <p><b>Combat Feedback</b> — Added weapon trails, particle effects, hit reactions and sound effects for swings, footsteps and blocks to strengthen the sense of impact.</p>
         </div>
       </div>
     </div>
+
+    <section class="detail-section">
+      <div class="detail-heading">
+        <p class="eyebrow">SYSTEM BREAKDOWN</p>
+        <h2>How the combat works.</h2>
+      </div>
+      <div class="detail-grid">
+        <article>
+          <span>01</span>
+          <h3>Attack → Hitbox → Impact</h3>
+          <p>Weapon hitboxes are activated during the appropriate strike frames rather than treating the whole attack animation as a hit. This keeps attack timing readable and makes collisions feel tied to the animation.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Block → Stamina → Posture</h3>
+          <p>Blocking is not a free defensive state. It drains stamina and affects posture; when posture reaches zero, the player becomes exhausted and vulnerable.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Parry → Stagger → Counter</h3>
+          <p>The parry is deliberately timing-sensitive. A successful parry staggers the opponent and creates a short counterattack opportunity, giving the mechanic a high-risk, high-reward structure.</p>
+        </article>
+        <article>
+          <span>04</span>
+          <h3>AI → Behaviour → Combat</h3>
+          <p>Enemies patrol and chase using pathfinding, while a behaviour tree handles movement, aggression and attacks. The AI was still being refined as the prototype evolved.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="detail-section environment-section">
+      <div class="detail-heading">
+        <p class="eyebrow">LEVEL & ATMOSPHERE</p>
+        <h2>From combat arena to world.</h2>
+      </div>
+      <div class="environment-grid">
+        <div>
+          <p>Alongside the combat work, I built a Witcher-inspired environment from scratch with a focus on open-world-style immersion and exploration.</p>
+          <ul>
+            <li>Game design & level layout — planning terrain structure and placement.</li>
+            <li>Terrain sculpting — shaping ground, valleys and rivers.</li>
+            <li>Object placement — trees, rocks and foliage for environmental detail.</li>
+            <li>Village building — houses, interiors and props.</li>
+            <li>Lighting & atmosphere — day/night settings, post-processing and environmental mood.</li>
+            <li>Third-person controller — a playable controller for exploring the environment.</li>
+          </ul>
+        </div>
+        <div class="environment-note">
+          <p class="eyebrow">DESIGN FOCUS</p>
+          <strong>Combat should feel grounded in the world around it.</strong>
+          <p>After refining textures, lighting and ambience, the prototype became a space where the combat systems could be experienced inside a custom-built village rather than in an isolated test scene.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="detail-section">
+      <div class="detail-heading">
+        <p class="eyebrow">TECH STACK</p>
+        <h2>Tools & techniques.</h2>
+      </div>
+      <div class="page-tech">
+        <span>Unity</span><span>C#</span><span>Character Animation</span><span>Rigging</span><span>Hit Detection</span><span>Behaviour Trees</span><span>Pathfinding</span><span>Combat Design</span><span>Particle Effects</span><span>VFX</span><span>Sound Design</span><span>Level Design</span><span>Post Processing</span><span>3D Environment</span>
+      </div>
+    </section>
   </main>
 </body>
 </html>

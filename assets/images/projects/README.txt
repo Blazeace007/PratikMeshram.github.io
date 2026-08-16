@@ -1,21 +1,47 @@
-PROJECT THUMBNAILS
+PROJECT IMAGE CAROUSELS
 
-Put your JPG thumbnails directly in this folder.
+Each project now cycles through 4 images automatically.
 
-EXACT FILENAMES:
-madmax-thumbnail.jpg
-zard-thumbnail.jpg
-ballsy-thumbnail.jpg
-last-laugh-thumbnail.jpg
-capital-rush-thumbnail.jpg
-pakka-park-thumbnail.jpg
+Put these exact files into this folder:
 
-Recommended: 1280 x 720 (16:9), or any landscape image.
+MADMAX
+madmax-01.jpg
+madmax-02.jpg
+madmax-03.jpg
+madmax-04.jpg
 
-IMPORTANT:
-- Keep the filenames exactly as written.
-- Keep the files inside assets/images/projects/
-- GitHub Pages is case-sensitive, so MadMax-thumbnail.jpg is NOT the same as madmax-thumbnail.jpg.
-- If you use PNG, change the extension in index.html as well.
+ZARD
+zard-01.jpg
+zard-02.jpg
+zard-03.jpg
+zard-04.jpg
 
-The project cards now use <img> elements directly. No video or placeholder overlay is used.
+BALLSY
+ballsy-01.jpg
+ballsy-02.jpg
+ballsy-03.jpg
+ballsy-04.jpg
+
+LAST LAUGH
+last-laugh-01.jpg
+last-laugh-02.jpg
+last-laugh-03.jpg
+last-laugh-04.jpg
+
+CAPITAL RUSH
+capital-rush-01.jpg
+capital-rush-02.jpg
+capital-rush-03.jpg
+capital-rush-04.jpg
+
+PAKKAPARK
+pakka-park-01.jpg
+pakka-park-02.jpg
+pakka-park-03.jpg
+pakka-park-04.jpg
+
+Recommended image format: JPG or PNG, ideally 16:9 or landscape.
+The carousel automatically advances every 3.2 seconds, fades between images,
+loops back to image 1, and pauses while the user hovers over the image.
+
+If using PNG, change .jpg to .png in index.html.

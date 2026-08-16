@@ -1,26 +1,22 @@
-PROJECT VIDEOS
+PROJECT VIDEO TEST
 
-The project section design is unchanged.
-Only the project thumbnail/media has been changed from images to video.
+ZARD is now configured to use one local MP4:
 
-Put these exact files here:
+assets/videos/zard.mp4
 
-madmax.mp4
+Put your Zard gameplay video here with EXACTLY this filename:
 zard.mp4
-ballsy.mp4
-last-laugh.mp4
-capital-rush.mp4
-pakka-park.mp4
-
-Each video:
-- autoplay
-- muted
-- loops
-- has no controls
-- stays inside the existing project media area
 
 Recommended:
-1280x720 / 16:9 / H.264 MP4 / 30 FPS / 10–15 seconds.
+- MP4
+- H.264
+- 1280x720
+- 30 FPS
+- 10–15 seconds
+- muted/no audio
+- ideally under 6 MB
 
-IMPORTANT:
-Do not change the project HTML/CSS layout. Only replace the MP4 files when updating gameplay clips.
+The video will autoplay, stay muted, loop, and have no controls.
+
+ONLY ZARD has been changed in this test.
+The other projects still use their existing image carousels.

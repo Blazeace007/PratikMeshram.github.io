@@ -1465,8 +1465,141 @@ footer{border-top:1px solid var(--line);padding:24px 8vw;display:flex;justify-co
   }
 }
 
-/* MEDIA ONLY — project thumbnails are now autoplay gameplay videos.
-   Project card dimensions, spacing, typography and layout remain unchanged. */
+/* PROJECT GRID — USE THE FULL WIDTH OF THE SECTION */
+.work-section .projects-grid{
+  width:calc(100% + 120px);
+  margin-left:-60px;
+  margin-right:-60px;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:28px;
+}
+
+.work-section .project-card{
+  width:100%;
+  min-width:0;
+  aspect-ratio:2.15 / 1;
+  grid-template-columns:64% 36%;
+}
+
+/* Give the media more visual weight without shrinking the information panel. */
+.work-section .project-card-media,
+.work-section .project-thumbnail{
+  min-width:0;
+  width:100%;
+}
+
+/* Keep the project text comfortably readable at the larger card width. */
+.work-section .project-card-body{
+  padding:26px 24px;
+}
+
+@media(max-width:1150px){
+  .work-section .projects-grid{
+    width:100%;
+    margin-left:0;
+    margin-right:0;
+  }
+}
+
+@media(max-width:700px){
+  .work-section .projects-grid{
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+}
+
+/* PROJECT THUMBNAILS — SHOW THE COMPLETE SOURCE IMAGE */
+.work-section .project-card-media{
+  background:#0b0b0b;
+}
+
+.work-section .project-thumbnail{
+  width:100%;
+  height:100%;
+  min-width:0;
+  min-height:0;
+  display:block;
+  object-fit:contain;
+  object-position:center;
+  background:#0b0b0b;
+}
+
+/* PROJECT IMAGE CAROUSELS */
+.project-carousel{
+  position:relative;
+  width:100%;
+  height:100%;
+  min-width:0;
+  min-height:0;
+  overflow:hidden;
+  background:#0b0b0b;
+}
+
+.project-carousel-image{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  min-width:0;
+  min-height:0;
+  display:block;
+  object-fit:contain;
+  object-position:center;
+  background:#0b0b0b;
+  opacity:0;
+  visibility:hidden;
+  transition:opacity .7s ease, visibility .7s ease;
+}
+
+.project-carousel-image.is-active{
+  opacity:1;
+  visibility:visible;
+}
+
+.carousel-dots{
+  position:absolute;
+  z-index:4;
+  left:18px;
+  bottom:15px;
+  display:flex;
+  gap:5px;
+  padding:5px 7px;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(0,0,0,.45);
+  backdrop-filter:blur(4px);
+}
+
+.carousel-dot{
+  width:5px;
+  height:5px;
+  border-radius:50%;
+  background:#555;
+  transition:background .25s,transform .25s;
+}
+
+.carousel-dot.active{
+  background:var(--accent);
+  transform:scale(1.2);
+}
+
+@media(max-width:650px){
+  .carousel-dots{
+    left:12px;
+    bottom:12px;
+  }
+}
+
+/* SINGLE PROJECT VIDEO TEST — ZARD ONLY */
+.project-video{
+  position:relative;
+  width:100%;
+  height:100%;
+  min-width:0;
+  min-height:0;
+  overflow:hidden;
+  background:#0b0b0b;
+}
+
 .project-video-player{
   display:block;
   width:100%;
@@ -1478,396 +1611,24 @@ footer{border-top:1px solid var(--line);padding:24px 8vw;display:flex;justify-co
   background:#0b0b0b;
 }
 
-/* =========================================================
-   SKILLS ONLY — LARGER, MORE VISIBLE SKILL CARDS
-   ========================================================= */
-.visual-skill-group{
-  padding:24px 0;
-}
-
-.visual-skill-heading{
-  margin-bottom:16px;
-  gap:15px;
-}
-
-.visual-skill-heading span{
-  font-size:9px;
-}
-
-.visual-skill-heading strong{
-  font-size:9px;
-}
-
-.visual-skill-grid{
-  gap:9px;
-}
-
-.visual-skill{
-  width:104px;
-  min-height:94px;
-  padding:11px 8px 10px;
-  gap:9px;
-}
-
-.visual-skill-icon{
-  width:43px;
-  height:43px;
-}
-
-.visual-skill-icon img{
-  width:43px;
-  height:43px;
-}
-
-.visual-skill span{
-  font-size:9px;
-  line-height:1.2;
-}
-
-@media(max-width:1200px){
-  .visual-skill{
-    width:100px;
-    min-height:92px;
-  }
-  .visual-skill-icon,
-  .visual-skill-icon img{
-    width:41px;
-    height:41px;
-  }
-}
-
-@media(max-width:800px){
-  .visual-skill{
-    width:96px;
-    min-height:90px;
-  }
-  .visual-skill-icon,
-  .visual-skill-icon img{
-    width:40px;
-    height:40px;
-  }
-}
-
-
-
-/* =========================================================
-   UNITY ONLY — FINAL VISUAL TEST
-   Large icon tile + label outside underneath.
-   All other skills remain unchanged.
-   ========================================================= */
-.unity-skill-test{
-  width:150px;
-  min-height:0;
-  height:auto;
-  padding:0;
-  gap:10px;
-  border:0;
-  background:transparent;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:flex-start;
-}
-
-.unity-skill-test .visual-skill-icon{
-  width:150px;
-  height:150px;
-  min-height:150px;
-  padding:12px;
-  box-sizing:border-box;
-  border:1px solid #303030;
-  background:#0d0f12;
-  border-radius:0;
-  display:flex;
+.video-file-message{
+  display:none;
+  position:absolute;
+  inset:0;
   align-items:center;
   justify-content:center;
-}
-
-.unity-skill-test .visual-skill-icon img{
-  width:118px;
-  height:118px;
-  max-width:118px;
-  max-height:118px;
-  object-fit:contain;
-}
-
-.unity-skill-test > span{
-  display:block;
-  width:100%;
-  margin:0;
-  padding:0;
   text-align:center;
-  color:#ddd;
-  font-size:12px;
-  line-height:1.2;
-  letter-spacing:.02em;
+  color:#555;
+  font:700 8px "Space Grotesk";
+  letter-spacing:.12em;
+  pointer-events:none;
 }
 
-@media(max-width:800px){
-  .unity-skill-test{
-    width:140px;
+@media(max-width:650px){
+  .project-video{
+    aspect-ratio:16 / 9;
   }
-  .unity-skill-test .visual-skill-icon{
-    width:140px;
-    height:140px;
-    min-height:140px;
-  }
-  .unity-skill-test .visual-skill-icon img{
-    width:108px;
-    height:108px;
-    max-width:108px;
-    max-height:108px;
-  }
-}
-
-
-/* =========================================================
-   UNITY ONLY — TEXT OUTSIDE THE ICON BOX
-   ========================================================= */
-.visual-skills .visual-skill-group .visual-skill-grid .visual-skill.unity-skill-test{
-  width:150px !important;
-  height:auto !important;
-  min-height:0 !important;
-  padding:0 !important;
-  margin:0 !important;
-  gap:9px !important;
-  border:0 !important;
-  background:transparent !important;
-  box-shadow:none !important;
-  display:flex !important;
-  flex-direction:column !important;
-  align-items:center !important;
-  justify-content:flex-start !important;
-}
-
-.visual-skills .visual-skill-group .visual-skill-grid .visual-skill.unity-skill-test > .visual-skill-icon{
-  position:relative !important;
-  width:150px !important;
-  height:150px !important;
-  min-height:150px !important;
-  padding:10px !important;
-  margin:0 !important;
-  box-sizing:border-box !important;
-  border:1px solid #303030 !important;
-  background:#0d0f12 !important;
-  display:flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-}
-
-.visual-skills .visual-skill-group .visual-skill-grid .visual-skill.unity-skill-test > .visual-skill-icon img{
-  width:120px !important;
-  height:120px !important;
-  max-width:120px !important;
-  max-height:120px !important;
-  object-fit:contain !important;
-}
-
-.visual-skills .visual-skill-group .visual-skill-grid .visual-skill.unity-skill-test > span{
-  position:static !important;
-  width:150px !important;
-  height:auto !important;
-  margin:0 !important;
-  padding:0 !important;
-  border:0 !important;
-  background:transparent !important;
-  display:block !important;
-  color:#ddd !important;
-  text-align:center !important;
-  font-size:12px !important;
-  line-height:1.2 !important;
-}
-
-@media(max-width:800px){
-  .visual-skills .visual-skill-group .visual-skill-grid .visual-skill.unity-skill-test{
-    width:140px !important;
-  }
-  .visual-skills .visual-skill-group .visual-skill.unity-skill-test > .visual-skill-icon{
-    width:140px !important;
-    height:140px !important;
-    min-height:140px !important;
-  }
-  .visual-skills .visual-skill-group .visual-skill-grid .visual-skill.unity-skill-test > span{
-    width:140px !important;
-  }
-}
-
-
-/* =========================================================
-   ALL SKILLS — LARGE ICON TILES + LABELS OUTSIDE
-   ========================================================= */
-.visual-skills .visual-skill{
-  width:150px !important;
-  height:auto !important;
-  min-height:0 !important;
-  padding:0 !important;
-  margin:0 !important;
-  gap:9px !important;
-  border:0 !important;
-  background:transparent !important;
-  box-shadow:none !important;
-  display:flex !important;
-  flex-direction:column !important;
-  align-items:center !important;
-  justify-content:flex-start !important;
-}
-
-.visual-skills .visual-skill .visual-skill-icon{
-  position:relative !important;
-  width:150px !important;
-  height:150px !important;
-  min-height:150px !important;
-  padding:4px !important;
-  margin:0 !important;
-  box-sizing:border-box !important;
-  border:1px solid #303030 !important;
-  background:#0d0f12 !important;
-  border-radius:0 !important;
-  display:flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-}
-
-.visual-skills .visual-skill .visual-skill-icon img{
-  width:140px !important;
-  height:140px !important;
-  max-width:140px !important;
-  max-height:140px !important;
-  object-fit:contain !important;
-}
-
-.visual-skills .visual-skill > span{
-  position:static !important;
-  width:150px !important;
-  height:auto !important;
-  margin:0 !important;
-  padding:0 !important;
-  border:0 !important;
-  background:transparent !important;
-  display:block !important;
-  color:#ddd !important;
-  text-align:center !important;
-  font-size:11px !important;
-  line-height:1.25 !important;
-  letter-spacing:.01em !important;
-}
-
-@media(max-width:1200px){
-  .visual-skills .visual-skill{
-    width:140px !important;
-  }
-  .visual-skills .visual-skill .visual-skill-icon{
-    width:140px !important;
-    height:140px !important;
-    min-height:140px !important;
-  }
-  .visual-skills .visual-skill .visual-skill-icon img{
-    width:130px !important;
-    height:130px !important;
-    max-width:130px !important;
-    max-height:130px !important;
-  }
-  .visual-skills .visual-skill > span{
-    width:140px !important;
-  }
-}
-
-@media(max-width:800px){
-  .visual-skills .visual-skill{
-    width:125px !important;
-  }
-  .visual-skills .visual-skill .visual-skill-icon{
-    width:125px !important;
-    height:125px !important;
-    min-height:125px !important;
-  }
-  .visual-skills .visual-skill .visual-skill-icon img{
-    width:116px !important;
-    height:116px !important;
-    max-width:116px !important;
-    max-height:116px !important;
-  }
-  .visual-skills .visual-skill > span{
-    width:125px !important;
-    font-size:10px !important;
-  }
-}
-
-/* GAME DEVELOPMENT — COMPACT LARGE-ICON LAYOUT */
-.visual-skills .visual-skill-grid{
-  gap:12px !important;
-}
-
-.visual-skills .visual-skill{
-  width:132px !important;
-  gap:6px !important;
-}
-
-.visual-skills .visual-skill .visual-skill-icon{
-  width:132px !important;
-  height:132px !important;
-  min-height:132px !important;
-  padding:3px !important;
-}
-
-.visual-skills .visual-skill .visual-skill-icon img{
-  width:124px !important;
-  height:124px !important;
-  max-width:124px !important;
-  max-height:124px !important;
-}
-
-.visual-skills .visual-skill > span{
-  width:132px !important;
-  font-size:10px !important;
-  line-height:1.15 !important;
-}
-
-.visual-skill-group{
-  padding:17px 0 !important;
-}
-
-.visual-skill-heading{
-  margin-bottom:11px !important;
-}
-
-@media(max-width:1200px){
-  .visual-skills .visual-skill{
-    width:124px !important;
-  }
-  .visual-skills .visual-skill .visual-skill-icon{
-    width:124px !important;
-    height:124px !important;
-    min-height:124px !important;
-  }
-  .visual-skills .visual-skill .visual-skill-icon img{
-    width:116px !important;
-    height:116px !important;
-    max-width:116px !important;
-    max-height:116px !important;
-  }
-  .visual-skills .visual-skill > span{
-    width:124px !important;
-  }
-}
-
-@media(max-width:800px){
-  .visual-skills .visual-skill{
-    width:112px !important;
-  }
-  .visual-skills .visual-skill .visual-skill-icon{
-    width:112px !important;
-    height:112px !important;
-    min-height:112px !important;
-  }
-  .visual-skills .visual-skill .visual-skill-icon img{
-    width:104px !important;
-    height:104px !important;
-    max-width:104px !important;
-    max-height:104px !important;
-  }
-  .visual-skills .visual-skill > span{
-    width:112px !important;
-    font-size:9px !important;
+  .project-video-player{
+    height:100%;
   }
 }
