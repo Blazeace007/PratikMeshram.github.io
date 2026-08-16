@@ -1,71 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Last Laugh | Pratik Meshram</title>
-  <link rel="stylesheet" href="../style.css">
-  <style>
-    .project-page{max-width:1240px;margin:auto;padding:150px 4vw 100px}
-    .back-link{display:inline-block;color:#777;font:700 9px "Space Grotesk";letter-spacing:.15em;margin-bottom:45px}
-    .back-link:hover{color:var(--accent)}
-    .project-page h1{font-size:clamp(60px,9vw,120px);line-height:.82;margin:0}
-    .project-page .page-type{color:var(--accent);font:700 10px "Space Grotesk";letter-spacing:.18em;margin:20px 0 35px}
-    .full-video{margin-top:50px;background:#0d0d0d;border:1px solid #292929;aspect-ratio:16/9;position:relative}
-    .full-video video{width:100%;height:100%;object-fit:cover;display:block}
-    .video-note{position:absolute;inset:0;display:grid;place-items:center;color:#555;font:700 10px "Space Grotesk";letter-spacing:.15em;pointer-events:none}
-    .project-page-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;margin-top:65px;border-top:1px solid #292929;padding-top:40px}
-    .project-page h2{font-size:38px;margin-bottom:20px}
-    .project-page p{color:#888;font-size:14px;line-height:1.8}
-    .project-page .work-list{border-top:1px solid #292929}
-    .project-page .work-list p{padding:17px 0;border-bottom:1px solid #292929;margin:0}
-    .page-tech{display:flex;gap:8px;flex-wrap:wrap;margin-top:25px}
-    .page-tech span{border:1px solid #303030;padding:8px 10px;color:#777;font:700 8px "Space Grotesk";letter-spacing:.12em}
-    @media(max-width:700px){.project-page{padding:120px 6vw 80px}.project-page-grid{grid-template-columns:1fr;gap:40px}.project-page h1{font-size:62px}}
-  </style>
-</head>
-<body>
-  <div class="noise"></div>
-  <header class="site-header">
-    <nav>
-      <a href="../index.html#work">Work</a>
-      <a href="../index.html#skills">Skills</a>
-      <a href="../index.html#about">About</a>
-      <a href="../index.html#contact">Contact</a>
-    </nav>
-    <a class="header-cta" href="../index.html#contact">Let's talk <span>↗</span></a>
-  </header>
-
-  <main class="project-page">
-    <a class="back-link" href="../index.html#work">← BACK TO PROJECTS</a>
-    <p class="eyebrow">PROJECT / 05</p>
-    <h1>Last Laugh</h1>
-    <p class="page-type">2D PLATFORMER</p>
-
-    <div class="full-video">
-      <video controls playsinline preload="metadata">
-        <source src="../assets/videos/last-laugh-full.mp4" type="video/mp4">
-      </video>
-      <div class="video-note">ADD FULL PROJECT VIDEO</div>
-    </div>
-
-    <div class="project-page-grid">
-      <div>
-        <p class="eyebrow">WHAT IT IS</p>
-        <h2>About the project</h2>
-        <p>A 2D platformer project.</p>
-      </div>
-      <div>
-        <p class="eyebrow">MY WORK</p>
-        <h2>What I did</h2>
-        <div class="work-list">
-          <p>Project details to be added from your development notes.</p>
-        </div>
-        <div class="page-tech">
-          <span>Unity</span><span>C#</span><span>2D</span>
-        </div>
-      </div>
-    </div>
-  </main>
-</body>
-</html>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Last Laugh | Pratik Meshram</title><link rel="stylesheet" href="../style.css">
+<style>
+.project-page{max-width:1240px;margin:auto;padding:150px 4vw 100px}.back-link{display:inline-block;color:#777;font:700 9px "Space Grotesk";letter-spacing:.15em;margin-bottom:45px}.back-link:hover{color:var(--accent)}
+.project-page h1{font-size:clamp(60px,9vw,120px);line-height:.82;margin:0}.page-type{color:var(--accent);font:700 10px "Space Grotesk";letter-spacing:.18em;margin:20px 0 35px}
+.project-page-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;margin-top:65px;border-top:1px solid #292929;padding-top:40px}.project-page h2{font-size:38px;margin-bottom:20px}.project-page p{color:#888;font-size:14px;line-height:1.8}.work-list{border-top:1px solid #292929}.work-list p{padding:17px 0;border-bottom:1px solid #292929;margin:0}
+.showcase{margin-top:58px}.showcase-heading{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:22px;border-top:1px solid #292929;padding-top:28px}.showcase-heading h2{margin:0}.showcase-heading p{margin:0;max-width:430px}
+.video-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.video-card{display:block;background:#0d0d0d;border:1px solid #292929;text-decoration:none;overflow:hidden;transition:.25s}.video-card:hover{transform:translateY(-4px);border-color:#555}
+.video-thumb{aspect-ratio:16/9;overflow:hidden;position:relative;background:#111}.video-thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:.35s}.video-card:hover .video-thumb img{transform:scale(1.035)}
+.play-badge{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:62px;height:62px;border:1px solid #fff;border-radius:50%;background:#0009;display:grid;place-items:center}.play-badge:after{content:"";margin-left:4px;border-left:16px solid #fff;border-top:11px solid transparent;border-bottom:11px solid transparent}
+.video-info{padding:17px 18px 19px}.video-number{color:var(--accent);font:700 8px "Space Grotesk";letter-spacing:.15em}.video-title{display:block;color:#eee;font:700 18px "Space Grotesk";margin-top:7px}.video-sub{display:block;color:#666;font:700 8px "Space Grotesk";letter-spacing:.12em;margin-top:8px}
+.detail-section{margin-top:75px;border-top:1px solid #292929;padding-top:34px}.detail-heading{margin-bottom:30px}.detail-heading h2{margin:4px 0 0;font-size:38px}.detail-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:#292929;border:1px solid #292929}.detail-grid article{background:#0b0b0b;padding:30px;min-height:185px}.detail-grid article>span{color:var(--accent);font:700 9px "Space Grotesk";letter-spacing:.15em}.detail-grid h3{font:700 19px "Space Grotesk";margin:15px 0 10px;color:#eee}.detail-grid p{margin:0;color:#777;font-size:13px;line-height:1.75}.tech{display:flex;gap:8px;flex-wrap:wrap;margin-top:25px}.tech span{border:1px solid #303030;padding:8px 10px;color:#777;font:700 8px "Space Grotesk";letter-spacing:.12em}
+@media(max-width:850px){.video-grid,.project-page-grid,.detail-grid{grid-template-columns:1fr}.showcase-heading{display:block}.showcase-heading p{margin-top:12px}.project-page{padding:120px 6vw 80px}.project-page h1{font-size:62px}}
+</style></head>
+<body><div class="noise"></div>
+<header class="site-header"><nav><a href="../index.html#work">Work</a><a href="../index.html#skills">Skills</a><a href="../index.html#about">About</a><a href="../index.html#contact">Contact</a></nav><a class="header-cta" href="../index.html#contact">Let's talk <span>↗</span></a></header>
+<main class="project-page">
+<a class="back-link" href="../index.html#work">← BACK TO PROJECTS</a><p class="eyebrow">PROJECT / 04</p><h1>Last Laugh</h1><p class="page-type">2D PLATFORMER · HORROR / DARK HUMOR</p>
+<section class="showcase"><div class="showcase-heading"><div><p class="eyebrow">GAMEPLAY SHOWCASE</p><h2>Two development stages.</h2></div><p>A work-in-progress 2D combat platformer focused on movement, weapon combat, enemy interaction and building the game's visual identity.</p></div>
+<div class="video-grid">
+<a class="video-card" href="https://www.linkedin.com/posts/pratik-meshram-870180181_madewithunity-unity2d-2dgamedevelopment-activity-7387583494325010433-ATRt/" target="_blank" rel="noopener"><div class="video-thumb"><img src="../assets/images/last-laugh/last-laugh-video-01.png" alt="Last Laugh gameplay development video"><span class="play-badge"></span></div><div class="video-info"><span class="video-number">01 / COMBAT + MOVEMENT</span><span class="video-title">Platformer Combat Prototype</span><span class="video-sub">WATCH VIDEO ↗</span></div></a>
+<a class="video-card" href="https://www.linkedin.com/posts/pratik-meshram-870180181_wip-gamedev-indiedev-activity-7398363976960720896-xChM/" target="_blank" rel="noopener"><div class="video-thumb"><img src="../assets/images/last-laugh/last-laugh-video-02.jpg" alt="Last Laugh work in progress video"><span class="play-badge"></span></div><div class="video-info"><span class="video-number">02 / WIP DEVELOPMENT</span><span class="video-title">Building Last Laugh</span><span class="video-sub">WATCH VIDEO ↗</span></div></a>
+</div></section>
+<div class="project-page-grid"><div><p class="eyebrow">WHAT IT IS</p><h2>A darkly playful platformer.</h2><p>Last Laugh is a 2D platformer prototype built around a stylized horror-comedy identity. The project combines platforming movement with close-range weapon combat and a deliberately strange visual tone.</p><p>The prototype was also used to explore animation, combat, UI and environmental presentation while iterating quickly in Unity.</p></div>
+<div><p class="eyebrow">MY WORK</p><h2>Systems & implementation</h2><div class="work-list"><p><b>Animation</b> — Created and implemented character animations while developing the project.</p><p><b>Weapon Combat</b> — Implemented a scissor-based weapon and new attack animations.</p><p><b>Movement</b> — Added run, jump, double jump, dash, pogo attack and wall climb mechanics.</p><p><b>Defense</b> — Added a guard mechanic alongside the movement and combat toolkit.</p><p><b>UI</b> — Reworked the main menu UI to fit the game's visual direction.</p><p><b>World</b> — Built the world environment, backgrounds and gameplay objects.</p></div></div></div>
+<section class="detail-section"><div class="detail-heading"><p class="eyebrow">SYSTEM BREAKDOWN</p><h2>Core gameplay.</h2></div><div class="detail-grid">
+<article><span>01</span><h3>Platforming Toolkit</h3><p>Run, jump and double jump form the base movement, with dash and wall climb adding more ways to navigate the environment.</p></article>
+<article><span>02</span><h3>Scissor Combat</h3><p>The combat identity is built around a scissor-based weapon, supported by custom attack animations and close-range interaction.</p></article>
+<article><span>03</span><h3>Advanced Movement</h3><p>Pogo attacks and wall climbing expand the platforming vocabulary and create opportunities for movement-driven encounters.</p></article>
+<article><span>04</span><h3>Guard & Presentation</h3><p>A guard mechanic adds defensive play while the reworked menu, backgrounds and world objects reinforce the project's dark, playful tone.</p></article>
+</div></section>
+<section class="detail-section"><div class="detail-heading"><p class="eyebrow">DESIGN DIRECTION</p><h2>Dark humor. Playful danger.</h2></div><p style="max-width:850px">The project deliberately contrasts cute, exaggerated character art with dangerous platforming and combat. That contrast became part of the game's identity: visually playful on the surface, but built around hazards, attacks and fast movement.</p><div class="tech"><span>Unity</span><span>C#</span><span>2D Platforming</span><span>Combat</span><span>Character Animation</span><span>UI</span><span>Level Design</span></div></section>
+</main></body></html>
