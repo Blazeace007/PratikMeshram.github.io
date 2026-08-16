@@ -936,3 +936,544 @@ footer{border-top:1px solid var(--line);padding:24px 8vw;display:flex;justify-co
   .photo-links a{font-size:10px}
   .photo-links svg{width:15px;height:15px}
 }
+
+
+
+
+/* Projects — landscape cards, two projects per row */
+.projects-grid{
+  width:100%;
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:22px;
+}
+.project-card{
+  min-width:0;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  min-height:270px;
+  border:1px solid #292929;
+  background:#0d0d0d;
+  overflow:hidden;
+  transition:transform .25s,border-color .25s,background .25s;
+}
+.project-card:hover{
+  transform:translateY(-4px);
+  border-color:#4a4a4a;
+  background:#101010;
+}
+.project-card-media{
+  position:relative;
+  display:block;
+  min-width:0;
+  min-height:270px;
+  overflow:hidden;
+  background:#111;
+  border-right:1px solid #292929;
+}
+.project-teaser{
+  width:100%;
+  height:100%;
+  min-height:270px;
+  display:block;
+  object-fit:cover;
+  background:#111;
+}
+.project-card-media:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:linear-gradient(90deg,transparent 45%,rgba(0,0,0,.35));
+}
+.video-placeholder{
+  position:absolute;
+  inset:0;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  background:
+    radial-gradient(circle at 50% 40%,rgba(216,255,62,.09),transparent 38%),
+    #0e0e0e;
+}
+.video-placeholder span{
+  color:var(--accent);
+  font:700 10px "Space Grotesk";
+  letter-spacing:.14em;
+}
+.video-placeholder b{
+  color:#555;
+  text-align:center;
+  font:700 7px "Space Grotesk";
+  letter-spacing:.12em;
+  line-height:1.6;
+}
+.project-static-visual{
+  width:100%;
+  height:100%;
+  min-height:270px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:
+    linear-gradient(135deg,rgba(216,255,62,.08),transparent 45%),
+    repeating-linear-gradient(0deg,transparent 0 31px,rgba(255,255,255,.035) 32px),
+    #0d0d0d;
+}
+.pakka-visual span{
+  font:700 clamp(48px,5vw,82px) "Space Grotesk";
+  letter-spacing:-.08em;
+  color:var(--accent);
+}
+.project-card-body{
+  min-width:0;
+  display:flex;
+  flex-direction:column;
+  padding:20px 18px;
+}
+.project-meta{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  color:#5e5e59;
+  font:700 6.5px "Space Grotesk";
+  letter-spacing:.13em;
+}
+.project-meta span:first-child{color:var(--accent)}
+.project-card h3{
+  margin:11px 0 8px;
+  color:#ddd;
+  font:500 clamp(24px,2.6vw,34px) "Space Grotesk";
+  line-height:1;
+  letter-spacing:-.04em;
+}
+.project-card-body>p{
+  margin:0;
+  color:#85857f;
+  font-size:8.5px;
+  line-height:1.65;
+}
+.project-contribution{
+  margin-top:15px;
+  padding-top:13px;
+  border-top:1px solid #252525;
+}
+.project-contribution b{
+  display:block;
+  color:#5e5e59;
+  font:700 6.5px "Space Grotesk";
+  letter-spacing:.11em;
+  margin-bottom:6px;
+}
+.project-contribution span{
+  display:block;
+  color:#777;
+  font-size:7.5px;
+  line-height:1.6;
+}
+.project-footer{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:8px;
+  margin-top:auto;
+  padding-top:14px;
+}
+.project-tech{
+  display:flex;
+  flex-wrap:wrap;
+  gap:4px;
+}
+.project-tech span{
+  padding:4px 5px;
+  border:1px solid #292929;
+  color:#666;
+  font:700 5px "Space Grotesk";
+  letter-spacing:.08em;
+}
+.project-footer>a{
+  flex:0 0 auto;
+  color:#aaa;
+  font:700 6px "Space Grotesk";
+  letter-spacing:.09em;
+  border-bottom:1px solid #444;
+  padding-bottom:3px;
+}
+.project-footer>a:hover{color:var(--accent);border-color:var(--accent)}
+
+.education-projects{
+  margin-top:58px;
+  border-top:1px solid var(--line);
+  padding-top:32px;
+}
+.education-heading{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:30px;
+  margin-bottom:18px;
+}
+.education-heading h3{
+  margin:8px 0 0;
+  font:500 clamp(28px,3vw,42px) "Space Grotesk";
+  letter-spacing:-.04em;
+}
+.education-heading h3 em{color:var(--accent);font-style:normal}
+.education-heading>p{
+  max-width:390px;
+  margin:0;
+  color:#777;
+  font-size:10px;
+  line-height:1.6;
+}
+.education-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1px;
+  background:#292929;
+  border:1px solid #292929;
+}
+.education-grid a{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  min-height:112px;
+  padding:18px;
+  background:#0d0d0d;
+  transition:background .2s,transform .2s;
+}
+.education-grid a:hover{background:#121212;transform:translateY(-2px)}
+.education-grid span{color:var(--accent);font:700 8px "Space Grotesk"}
+.education-grid strong{margin-top:auto;color:#ddd;font:500 21px "Space Grotesk"}
+.education-grid small{margin-top:6px;color:#555;font:700 7px "Space Grotesk";letter-spacing:.12em}
+
+@media(max-width:1100px){
+  .projects-grid{gap:16px}
+  .project-card{grid-template-columns:1fr 1fr;min-height:250px}
+  .project-card-media,.project-teaser,.project-static-visual{min-height:250px}
+  .project-card-body{padding:17px 15px}
+}
+@media(max-width:800px){
+  .projects-grid{grid-template-columns:1fr}
+  .project-card{grid-template-columns:1.15fr .85fr;min-height:260px}
+  .project-card-media,.project-teaser,.project-static-visual{min-height:260px}
+}
+@media(max-width:650px){
+  .project-card{grid-template-columns:1fr;min-height:0}
+  .project-card-media{
+    min-height:0;
+    aspect-ratio:16/9;
+    border-right:0;
+    border-bottom:1px solid #292929;
+  }
+  .project-teaser,.project-static-visual{min-height:0;height:100%}
+  .project-card-body{padding:17px}
+  .education-heading{display:block}
+  .education-heading>p{margin-top:12px}
+  .education-grid{grid-template-columns:1fr}
+}
+
+
+/* PROJECTS — EXPANDED LANDSCAPE CARDS */
+.projects-grid{
+  width:calc(100% + 70px);
+  margin-left:-35px;
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:28px;
+}
+
+.project-card{
+  min-width:0;
+  width:100%;
+  min-height:310px;
+  aspect-ratio:2.15 / 1;
+  display:grid;
+  grid-template-columns:64% 36%;
+  border:1px solid #292929;
+  background:#0d0d0d;
+  overflow:hidden;
+  transition:transform .25s ease,border-color .25s ease,background .25s ease;
+}
+
+.project-card:hover{
+  transform:translateY(-4px);
+  border-color:#484848;
+  background:#101010;
+}
+
+.project-card-media{
+  position:relative;
+  width:100%;
+  height:100%;
+  min-width:0;
+  min-height:0;
+  overflow:hidden;
+  background:#111;
+  border-right:1px solid #292929;
+}
+
+.project-thumbnail{
+  display:block;
+  width:100%;
+  height:100%;
+  min-width:0;
+  min-height:0;
+  object-fit:cover;
+  object-position:center;
+  background:#111;
+}
+
+.project-card-media:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:linear-gradient(90deg,transparent 60%,rgba(0,0,0,.25));
+}
+
+.project-card-body{
+  min-width:0;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+  padding:25px 23px;
+}
+
+.project-meta{
+  display:flex;
+  flex-direction:column;
+  gap:7px;
+  color:#5e5e59;
+  font:700 7px "Space Grotesk";
+  letter-spacing:.13em;
+}
+
+.project-meta span:first-child{color:var(--accent)}
+
+.project-card h3{
+  margin:13px 0 10px;
+  color:#ddd;
+  font:500 clamp(27px,2.8vw,40px) "Space Grotesk";
+  line-height:1;
+  letter-spacing:-.04em;
+}
+
+.project-card-body>p{
+  margin:0;
+  color:#85857f;
+  font-size:9.5px;
+  line-height:1.7;
+}
+
+.project-contribution{
+  margin-top:20px;
+  padding-top:15px;
+  border-top:1px solid #252525;
+}
+
+.project-contribution b{
+  display:block;
+  color:#5e5e59;
+  font:700 7px "Space Grotesk";
+  letter-spacing:.11em;
+  margin-bottom:7px;
+}
+
+.project-contribution span{
+  display:block;
+  color:#777;
+  font-size:8px;
+  line-height:1.65;
+}
+
+.project-footer{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:10px;
+  margin-top:auto;
+  padding-top:18px;
+}
+
+.project-tech{
+  display:flex;
+  flex-wrap:wrap;
+  gap:5px;
+}
+
+.project-tech span{
+  padding:5px 6px;
+  border:1px solid #292929;
+  color:#666;
+  font:700 5.5px "Space Grotesk";
+  letter-spacing:.08em;
+}
+
+.project-footer>a{
+  flex:0 0 auto;
+  color:#aaa;
+  font:700 7px "Space Grotesk";
+  letter-spacing:.09em;
+  border-bottom:1px solid #444;
+  padding-bottom:4px;
+}
+
+.project-footer>a:hover{
+  color:var(--accent);
+  border-color:var(--accent);
+}
+
+.education-projects{
+  width:calc(100% + 70px);
+  margin-left:-35px;
+  margin-top:65px;
+  border-top:1px solid var(--line);
+  padding-top:34px;
+}
+
+.education-heading{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:30px;
+  margin-bottom:20px;
+}
+
+.education-heading h3{
+  margin:8px 0 0;
+  font:500 clamp(28px,3vw,42px) "Space Grotesk";
+  letter-spacing:-.04em;
+}
+
+.education-heading h3 em{
+  color:var(--accent);
+  font-style:normal;
+}
+
+.education-heading>p{
+  max-width:390px;
+  margin:0;
+  color:#777;
+  font-size:10px;
+  line-height:1.6;
+}
+
+.education-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1px;
+  background:#292929;
+  border:1px solid #292929;
+}
+
+.education-grid a{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  min-height:120px;
+  padding:20px;
+  background:#0d0d0d;
+  transition:background .2s,transform .2s;
+}
+
+.education-grid a:hover{
+  background:#121212;
+  transform:translateY(-2px);
+}
+
+.education-grid span{
+  color:var(--accent);
+  font:700 8px "Space Grotesk";
+}
+
+.education-grid strong{
+  margin-top:auto;
+  color:#ddd;
+  font:500 22px "Space Grotesk";
+}
+
+.education-grid small{
+  margin-top:7px;
+  color:#555;
+  font:700 7px "Space Grotesk";
+  letter-spacing:.12em;
+}
+
+@media(max-width:1150px){
+  .projects-grid{
+    width:100%;
+    margin-left:0;
+    gap:20px;
+  }
+  .project-card{
+    min-height:290px;
+    grid-template-columns:62% 38%;
+  }
+  .education-projects{
+    width:100%;
+    margin-left:0;
+  }
+}
+
+@media(max-width:800px){
+  .projects-grid{
+    grid-template-columns:1fr;
+  }
+  .project-card{
+    min-height:310px;
+    grid-template-columns:64% 36%;
+  }
+}
+
+@media(max-width:650px){
+  .projects-grid{
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+
+  .project-card{
+    aspect-ratio:auto;
+    grid-template-columns:1fr;
+    min-height:0;
+  }
+
+  .project-card-media{
+    aspect-ratio:16 / 9;
+    border-right:0;
+    border-bottom:1px solid #292929;
+  }
+
+  .project-card-body{
+    height:auto;
+    padding:19px;
+  }
+
+  .education-heading{
+    display:block;
+  }
+
+  .education-heading>p{
+    margin-top:12px;
+  }
+
+  .education-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+/* MEDIA ONLY — project thumbnails are now autoplay gameplay videos.
+   Project card dimensions, spacing, typography and layout remain unchanged. */
+.project-video-player{
+  display:block;
+  width:100%;
+  height:100%;
+  min-width:0;
+  min-height:0;
+  object-fit:contain;
+  object-position:center;
+  background:#0b0b0b;
+}
